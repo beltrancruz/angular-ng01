@@ -1,0 +1,18 @@
+<h1>Component List</h1>
+<hr *ngIf="heroDeleted; else notDeleted">
+<div *ngIf="heroDeleted" >
+    <h3>Hero Delted: <small>{{heroDeleted}}</small></h3>
+</div>
+<ng-template #notDeleted>
+    <h3>Hero not deleted yet</h3>
+</ng-template>
+
+<hr>
+<button (click)="deleteHero()">Delete Hero</button>
+
+<hr>
+<ul>
+    <li *ngFor="let item of heros; let i = index">{{i + 1}}. {{item}}</li>
+</ul>
+
+
