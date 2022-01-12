@@ -17,6 +17,10 @@ export class MainPageComponent {
     return this.service.characters
   }
 
+  addCharacter(){
+    
+  }
+
   // get characters(): Character[]{
   //   return this.service.characters;
   // }

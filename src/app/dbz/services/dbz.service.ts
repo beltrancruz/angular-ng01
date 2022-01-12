@@ -4,12 +4,15 @@ import { Character } from '../interfaces/dbz.interface';
 @Injectable()
 export class DbzService {
     constructor() {
-        console.log('This service has been initialized');
-        
+        console.log('Dbz service has been initialized');
     }
 
     get characters():Character[]{
         return [...this._characters]
+    }
+
+    addCharacter(character:Character){
+        this._characters.push(character)
     }
 
     
